@@ -1,4 +1,9 @@
-# LLaMA 
+# OpenGPT-X: LLaMA 
+
+A fork of [LLaMA](https://github.com/facebookresearch/llama), which extends the framework to evaluate the models [lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness).
+The current implementation progress is tracked under [GitHub issues](https://github.com/OpenGPTX/llama/issues).
+
+## Original README
 
 This repository is intended as a minimal, hackable and readable example to load [LLaMA](https://ai.facebook.com/blog/large-language-model-llama-meta-ai/) ([arXiv](https://arxiv.org/abs/2302.13971v1)) models and run inference.
 In order to download the checkpoints and tokenizer, fill this [google form](https://forms.gle/jk851eBVbX1m5TAv5)
