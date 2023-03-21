@@ -1,6 +1,6 @@
 # OpenGPT-X: LLaMA 
 
-A fork of [LLaMA](https://github.com/facebookresearch/llama), which extends the framework to evaluate the models [lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness).
+A fork of [LLaMA](https://github.com/facebookresearch/llama), which extends the framework to evaluate the models on [lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness).
 The current implementation progress is tracked under [GitHub issues](https://github.com/OpenGPTX/llama/issues).
 
 ## Original README
