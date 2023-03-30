@@ -58,6 +58,8 @@ class EvalHarnessAdaptor(HFLM):
         returns: a torch tensor of shape [batch, sequence, vocab] with the
         logits returned from the model
         """
+        # put input to correct device
+        inps = inps.cuda()
         return self.gpt2.model.forward(inps, start_pos=0, return_all_logits=True)
 
     def _model_generate(self, context, max_length, eos_token_id):
