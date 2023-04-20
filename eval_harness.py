@@ -18,6 +18,8 @@ def main(
     top_p: float = 0.95,
     max_seq_len: int = 512,
     max_batch_size: int = 32,
+    write_detailed_eval_info: bool = False,
+    detailed_eval_info_path: str = None,
 ):
     local_rank, world_size = setup_model_parallel()
     if local_rank > 0:
@@ -40,7 +42,13 @@ def main(
     if not task_list:
         task_list = tasks.ALL_TASKS
     task_dict = tasks.get_task_dict(task_list)
-    results = evaluator.evaluate(adaptor, task_dict, num_fewshot=num_fewshot)
+    results = evaluator.evaluate(
+        lm=adaptor,
+        task_dict=task_dict,
+        num_fewshot=num_fewshot,
+        write_detailed_eval_info=write_detailed_eval_info,
+        detailed_eval_info_path=detailed_eval_info_path
+    )
     print(results)
 
 
